@@ -9,7 +9,7 @@ class MyMovies extends Component {
         <div className="list__container">
           {this.props.movieList.map((movie, index) => {
             return (
-              <div className="list__container-item">
+              <div key={index} className="list__container-item">
                 <img
                   className="search-list__item-img"
                   src={`${this.props.imageUrl}${movie.image}`}
