@@ -1,0 +1,50 @@
+@mixin tablet {
+  @media (min-width: $tabletWidth) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktopWidth) {
+    @content;
+  }
+}
+
+@mixin margin {
+  margin-left: $mobileLeftMargin;
+  margin-right: $mobileLeftMargin;
+  @include tablet {
+    margin-left: $tabletLeftMargin;
+    margin-right: $tabletLeftMargin;
+  }
+
+  @include desktop {
+    margin-left: $desktopLeftMargin;
+    margin-right: $desktopLeftMargin;
+  }
+}
+
+@mixin padding {
+  padding-left: $mobileLeftMargin;
+  padding-right: $mobileLeftMargin;
+  @include tablet {
+    padding-left: $tabletLeftMargin;
+    padding-right: $tabletLeftMargin;
+  }
+
+  @include desktop {
+    padding-left: $desktopLeftMargin;
+    padding-right: $desktopLeftMargin;
+  }
+}
+
+@mixin button {
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgb(10, 159, 245);
+  border: none;
+  &:hover {
+    background-color: rgb(17, 114, 226);
+  }
+}

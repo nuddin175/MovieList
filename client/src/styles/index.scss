@@ -1,0 +1,17 @@
+@import "./partials/fonts";
+@import "./partials/colors";
+@import "./partials/variables";
+@import "./partials/mixins";
+
+@import "./partials/components/header";
+@import "./partials/components/search";
+@import "./partials/components/list";
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "roboto";
+  background-color: rgb(226, 236, 235);
+  margin: 0;
+  padding-bottom: 20px;
+}

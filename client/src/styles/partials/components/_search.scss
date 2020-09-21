@@ -1,0 +1,82 @@
+.search {
+  @include padding;
+  height: 100%;
+  background-color: rgb(226, 236, 235);
+  padding-top: 10px;
+
+  &-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    &-bar {
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 20px;
+      width: 65%;
+      height: 25px;
+    }
+    &-button {
+      @include button;
+      width: 30%;
+    }
+  }
+
+  &-list {
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      @include tablet {
+        display: flex;
+        &-img {
+          height: 278px;
+          width: 185px;
+        }
+      }
+
+      margin-top: 20px;
+
+      &-text {
+        @include tablet {
+          margin-left: 20px;
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 100%;
+          h2 {
+            margin-top: 0;
+          }
+        }
+      }
+
+      &--container {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+      }
+
+      &-button {
+        @include button;
+        width: 100%;
+        margin-top: 12px;
+        height: 30px;
+        @include tablet {
+        }
+      }
+    }
+  }
+}
+
+.page-controller {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  &__btn {
+    @include button;
+    width: 100px;
+    background-color: rgb(38, 39, 39);
+    color: white;
+  }
+}

@@ -1,0 +1,45 @@
+.list {
+  @include padding;
+  height: 100%;
+  background-color: rgb(226, 236, 235);
+  padding-top: 10px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      margin-top: 20px;
+      @include tablet {
+        display: flex;
+        h2 {
+          margin-top: 0;
+        }
+
+        &-text {
+          margin-left: 20px;
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.order {
+  font-weight: bold;
+}
+
+.movie-controller {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  @include button;
+  margin-right: 5px;
+  margin-top: 12px;
+  &-delete {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.header {
+  @include padding;
+  background-color: rgb(149, 238, 233);
+
+  height: 150pxpx;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
+  &-h1 {
+    align-self: center;
+    font-size: 40px;
+    height: 50%;
+    color: rgb(4, 36, 11);
+  }
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+  &-item {
+    width: 40%;
+    text-align: center;
+
+    color: rgb(6, 97, 26);
+    text-decoration: none;
+    @include tablet {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  &-selected {
+    border-bottom: 5px solid black;
+    @include tablet {
+      border-radius: 5px;
+      border: 3px solid black;
+    }
+  }
+}
